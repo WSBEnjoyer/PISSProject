@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  jpa:
+    open-in-view: false
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: test
+    password: test
+  flyway:
+    locations:
+      - classpath:db/migration
+    user: test
+    password: test
+
+application:
+  server:
+    error:
+      verbose: true

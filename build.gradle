@@ -1,0 +1,10 @@
+ext['log4j2.version'] = '2.17.1'
+
+/**
+ * Add common configurations for formatting and code coverage for all java subprojects.
+ */
+def javaSubprojects = ['inventory']
+
+configure(subprojects.findAll { it.name in javaSubprojects }) {
+    apply plugin: 'java'
+}
