@@ -1,0 +1,45 @@
+<div class = "container">
+    <div class = "title">
+        Add Product
+    </div>
+    <form [formGroup]="form" (ngSubmit)="saveDetails(form)">
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+        <mat-error>Name is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Price</mat-label>
+        <mat-error>Price must be a number!</mat-error>
+        <input matInput formControlName="price">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Quantity</mat-label>
+        <mat-error>Quantity must be a number!</mat-error>
+        <input matInput formControlName="quantity">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Picture Link</mat-label>
+        <input matInput formControlName="pictureURL">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Location</mat-label>
+        <mat-select formControlName="location">
+        <mat-option value="SOF">SOF</mat-option>
+        <mat-option value="BOJ">BOJ</mat-option>
+        <mat-option value="PDV">PDV</mat-option>
+        <mat-option value="VAR">VAR</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div mat-dialog-actions align="end">
+        <button mat-button type="submit" [disabled]="!form.valid">Submit</button>
+    </div>
+    </form>
+    <div class = 'notification' *ngIf="productAdded">
+        Successfully added a product!
+    </div>
+</div>

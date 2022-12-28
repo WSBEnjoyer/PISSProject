@@ -1,0 +1,30 @@
+
+<body>
+    <div class = 'content'>
+        <img src = '../../assets/dashboard.png' class = 'desc-img'>
+        <div class = 'description'>
+            Welcome to our Inventory System! Here, you can easily manage and track all of your product inventory, ensuring that you're never out of stock. Our powerful inventory management system allows you to quickly access inventory levels, pricing, and product information. With our real-time alerts, you can stay up-to-date on your inventory levels. With our service, you can ensure that your inventory is always up-to-date and you never miss a sale. Thank you for choosing our Inventory System!
+        </div>
+        
+        <div class='statistics'>
+            <mat-card>
+                <mat-card-header>
+                    Count of All Products
+                </mat-card-header>
+                <mat-card-content>
+                    {{ this.numberOfProducts }} products
+                </mat-card-content>
+            </mat-card>
+            
+            <mat-card>
+                <mat-card-header>
+                    Products Out of Stock
+                </mat-card-header>
+                <mat-card-content>
+                    {{ this.numberOfOutOfStockProducts }} products
+                </mat-card-content>
+            </mat-card>
+        
+        </div>
+    </div>
+</body>

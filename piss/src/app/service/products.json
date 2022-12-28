@@ -1,0 +1,23 @@
+{
+    "products" : [
+        {
+            "id": "123456ani",
+            "name": "Toy Car",
+            "price": 15,
+            "quantity": 358,
+            "description": "Toy cars make great gifts, and what better than to give them a traditional wooden toy car that is this cute? It’s a great size for popping in a bag – or even a pocket – for play dates and as emergency toy supplies for days out. A real hand made toy with tons of style and play value for all kinds of imagination-fueled adventures, and a great hand made gift for babies and toddlers.",
+            "pictureURL": "https://www.treehousetoys.co.uk/wp-content/uploads/2020/02/20200124_155151-scaled.jpg",
+            "location": "SFA"
+        },
+        {
+            "id": "123323Mlem",
+            "name": "Toy Doll",
+            "price": 39,
+            "quantity": 73,
+            "description": "Barbie doll for every little princess.",
+            "pictureURL": "https://images.fun.com/products/59733/1-1/barbie-happy-birthday-doll.jpg",
+            "location": "SFA"
+        }
+    ]
+}
+

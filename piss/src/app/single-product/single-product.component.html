@@ -1,0 +1,31 @@
+<div class='content'>
+    <a routerLink="/products" class = 'back-btn'><mat-icon >arrow_back_ios</mat-icon> View all products </a>
+    <img src='{{ this.product.pictureURL }}' class = 'product-img'>
+    <div class = 'title'>
+        {{ this.product.name }}
+    </div>
+
+    <div class = 'meta'>
+        {{ this.product.price}}$ | {{ this.product.quantity }} pieces | {{ this.product.location }}
+    </div>
+
+    <div class = 'desc'>
+        {{ this.product.description }}
+    </div>
+
+    <div class = 'shopping-cart'>
+        <mat-icon>shopping_cart</mat-icon>
+        <form #quantity="ngForm" (ngSubmit)="buy(quantity.value)"> 
+            <input type="text" name="quantity" placeholder="Quantity" ngModel> 
+            <button type="submit" mat-raised-button class='buy-btn'>Buy</button>
+         </form>
+    </div>
+
+    <div class = 'notification' *ngIf="successfulBuying">
+        Successfully bought {{ this.boughtQuantity }} pieces!
+    </div>
+
+    <div class = 'error' *ngIf="unsuccessfulBuying">
+        You can not buy {{ this.boughtQuantity }} pieces!
+    </div>
+</div>

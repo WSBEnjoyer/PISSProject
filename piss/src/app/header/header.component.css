@@ -1,0 +1,23 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover, a:active{
+    color: #964B00;
+}
+.navigation-items{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+mat-toolbar{
+    border-radius: 3px;
+    height: 80px;
+    background-color: #FFBF00;
+    color: white;
+    font-size: 28px;
+}
+
+mat-icon {
+    color: #964B00
+}
