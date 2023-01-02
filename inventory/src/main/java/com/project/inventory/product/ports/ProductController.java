@@ -19,8 +19,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.net.URI;
+import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor
@@ -59,4 +60,14 @@ public class ProductController {
         return ResponseEntity.noContent().build();
     }
 
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> getAllProducts() {
+        List<ProductResource> resources = productService
+                .findAllProducts()
+                .stream()
+                .map(ProductConverter::convertProduct)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok().body(resources);
+    }
 }

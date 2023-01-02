@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.UUID;
@@ -26,6 +27,7 @@ public class Product {
 
     private String description;
 
+    @Column(name="picture_url")
     private String pictureURL;
 
     private String location;

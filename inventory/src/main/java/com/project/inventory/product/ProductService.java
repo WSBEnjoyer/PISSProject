@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -17,6 +18,10 @@ public class ProductService {
     @Transactional(readOnly = true)
     public Product findExistingById(UUID productId) {
         return productRepository.findById(productId).orElseThrow(EntityNotFoundException::new);
+    }
+
+    public List<Product> findAllProducts() {
+        return productRepository.findAll();
     }
 
     @Transactional
