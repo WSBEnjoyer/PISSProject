@@ -6,5 +6,5 @@ export const loggingRxStompConfig: RxStompConfig = {
   heartbeatIncoming: 0,
   heartbeatOutgoing: 20000,
 
-  reconnectDelay: 5000,
+  reconnectDelay: 0,
 };
