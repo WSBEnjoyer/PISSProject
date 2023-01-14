@@ -28,6 +28,8 @@ dependencies {
 
     implementation 'com.h2database:h2:1.4.194'
 
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
+
     annotationProcessor 'org.projectlombok:lombok:1.18.2'
     compileOnly 'org.projectlombok:lombok:1.18.2'
 

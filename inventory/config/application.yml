@@ -21,3 +21,10 @@ application:
   server:
     error:
       verbose: true
+
+springdoc:
+  swagger-ui:
+    path: /doc
+    queryConfigEnabled: true
+  api-docs:
+    path: /api-doc-inventory
